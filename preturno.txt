@@ -1,0 +1,17 @@
+ 
+create table tblUsuarios(
+    id int auto_increment primary key,
+    cedula varchar(15) not null
+);
+
+
+
+
+
+create table tblPreturno(
+    id int auto_increment primary key,
+    cedula varchar(15) not null,
+    nombre varchar(150) not null,
+    Foreign key (cedula) references tblUsuarios (cedula),
+    foreign key (nombre) references tblUsuarios (cedula)
+);
